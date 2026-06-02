@@ -292,44 +292,23 @@ export function Cerveceria() {
 
           <FadeIn delay={0.1}>
             <div
-              className="relative w-full flex items-center justify-center"
+              className="relative w-full flex items-center justify-center overflow-hidden"
               style={{
                 minHeight: "480px",
                 backgroundColor: "#E8E4DE",
                 border: "2px solid #D5D0C8",
               }}
             >
-              {/* Decorative grid */}
-              <div
-                className="absolute inset-0 opacity-30"
-                style={{
-                  backgroundImage: "linear-gradient(#C8C2BA 1px, transparent 1px), linear-gradient(90deg, #C8C2BA 1px, transparent 1px)",
-                  backgroundSize: "40px 40px",
-                }}
+              <iframe
+                src="https://maps.google.com/maps?q=Plaza%20Manuel%20Ruiz%20Sosa,%2041100%20Coria%20del%20R%C3%ADo,%20Sevilla&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0"
               />
-              <div className="relative z-10 text-center px-8">
-                <div
-                  className="w-12 h-12 mx-auto mb-5 flex items-center justify-center"
-                  style={{ backgroundColor: "rgba(196,113,74,0.15)", border: "1px solid rgba(196,113,74,0.3)" }}
-                >
-                  <MapPin className="w-6 h-6" style={{ color: "#C4714A" }} />
-                </div>
-                <p
-                  className="text-sm font-medium mb-2"
-                  style={{ fontFamily: "Playfair Display, serif", color: "#4A4540" }}
-                >
-                  Cervecería Sevruga
-                </p>
-                <p className="text-xs mb-6" style={{ color: "#8A8580" }}>
-                  Pza. Manuel Ruíz Sosa · Coria del Río (Centro)
-                </p>
-                <div
-                  className="inline-block px-5 py-2.5 text-[0.65rem] tracking-[0.15em] uppercase"
-                  style={{ border: "1.5px dashed #B8B0A8", color: "#8A8580" }}
-                >
-                  [ PLACEHOLDER: GOOGLE MAPS IFRAME FOR CERVECERIA LOCATION ]
-                </div>
-              </div>
             </div>
           </FadeIn>
         </div>
