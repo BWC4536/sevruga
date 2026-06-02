@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
 function getOpenStatus(): { open: boolean; label: string } {
@@ -31,6 +31,16 @@ const instagramMock = [
 
 export function Footer() {
   const status = getOpenStatus();
+  const location = useLocation();
+  const isCerveceria = location.pathname === "/cerveceria";
+
+  const instagramLink = isCerveceria
+    ? "https://www.instagram.com/sevrugacerveceria/"
+    : "https://www.instagram.com/restaurantesevruga/";
+
+  const facebookLink = isCerveceria
+    ? "https://www.facebook.com/SevrugaCerveceria/?locale=es_LA"
+    : "https://www.facebook.com/restauranteSevruga/?locale=es_ES";
 
   return (
     <footer style={{ backgroundColor: "#1A1A1A", color: "#F9F9F9" }}>
@@ -38,13 +48,15 @@ export function Footer() {
       <div className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-8 lg:px-12 py-12">
           <div className="flex items-center gap-3 mb-8">
-            <Instagram className="w-5 h-5" style={{ color: "#C4714A" }} />
-            <span
-              className="text-[0.68rem] tracking-[0.2em] uppercase"
-              style={{ color: "#C4714A" }}
-            >
-              @sevrugarestaurante
-            </span>
+            <a href={instagramLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <Instagram className="w-5 h-5" style={{ color: "#C4714A" }} />
+              <span
+                className="text-[0.68rem] tracking-[0.2em] uppercase"
+                style={{ color: "#C4714A" }}
+              >
+                {isCerveceria ? "@sevrugacerveceria" : "@sevrugarestaurante"}
+              </span>
+            </a>
           </div>
           <div className="grid grid-cols-4 gap-3">
             {instagramMock.map((url, i) => (
@@ -201,7 +213,9 @@ export function Footer() {
             {/* Social */}
             <div className="flex items-center gap-4 mt-8">
               <a
-                href="#"
+                href={facebookLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-colors duration-200"
                 style={{ color: "rgba(249,249,249,0.4)" }}
                 aria-label="Facebook"
@@ -209,7 +223,9 @@ export function Footer() {
                 <Facebook className="w-5 h-5 hover:text-white transition-colors" />
               </a>
               <a
-                href="#"
+                href={instagramLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-colors duration-200"
                 style={{ color: "rgba(249,249,249,0.4)" }}
                 aria-label="Instagram"

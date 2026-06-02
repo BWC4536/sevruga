@@ -300,7 +300,7 @@ export function Cerveceria() {
               }}
             >
               <iframe
-                src="https://maps.google.com/maps?q=Plaza%20Manuel%20Ruiz%20Sosa,%2041100%20Coria%20del%20R%C3%ADo,%20Sevilla&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Cervecer%C3%ADa%20Sevruga,%20Coria%20del%20R%C3%ADo&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
