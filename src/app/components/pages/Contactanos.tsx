@@ -225,7 +225,7 @@ export function Contactanos() {
                 }}
               >
                 <iframe
-                  src="https://maps.google.com/maps?q=Av.%20de%20Andalucia,%205,%2041100%20Coria%20del%20R%C3%ADo,%20Sevilla&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Restaurante%20Sevruga,%20Coria%20del%20R%C3%ADo&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
